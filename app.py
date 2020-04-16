@@ -20,9 +20,11 @@ def draw(canvas):
     shot = fire(canvas, center_row, center_column)
     rocket = spaceship(canvas, center_row, center_column)
 
-    coroutines = stars
-    coroutines.append(shot)
-    coroutines.append(rocket)
+    coroutines = [
+        *stars,
+        shot,
+        rocket
+    ]
 
     while True:
         for coroutine in coroutines.copy():
