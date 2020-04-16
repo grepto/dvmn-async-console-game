@@ -26,14 +26,13 @@ def draw(canvas):
         rocket
     ]
 
-    while True:
+    while len(coroutines):
         for coroutine in coroutines.copy():
             try:
                 coroutine.send(None)
             except StopIteration:
                 coroutines.remove(coroutine)
-        if len(coroutines) == 0:
-            break
+
         canvas.refresh()
         time.sleep(TIC_TIMEOUT)
 
