@@ -14,7 +14,6 @@ async def spaceship(canvas, start_row, start_column):
 
     canvas_height, canvas_width = canvas.getmaxyx()
     frame_height, frame_width = get_frame_size(frame1)
-    canvas.nodelay(True)
 
     row, column = start_row + 1, start_column - round(frame_width / 2)
 

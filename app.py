@@ -10,6 +10,7 @@ TIC_TIMEOUT = 0.1
 
 def draw(canvas):
     canvas.border()
+    canvas.nodelay(True)
     curses.curs_set(False)
 
     height, width = canvas.getmaxyx()
