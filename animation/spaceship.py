@@ -23,7 +23,6 @@ async def spaceship(canvas, start_row, start_column):
 
     while True:
         draw_frame(canvas, row, column, frame2, negative=True)
-
         rows_direction, columns_direction, space_pressed = read_controls(canvas)
 
         if rows_direction:
@@ -34,7 +33,6 @@ async def spaceship(canvas, start_row, start_column):
 
         draw_frame(canvas, row, column, frame1)
         await asyncio.sleep(0)
-
         draw_frame(canvas, row, column, frame1, negative=True)
         draw_frame(canvas, row, column, frame2)
         await asyncio.sleep(0)
