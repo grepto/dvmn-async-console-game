@@ -27,7 +27,7 @@ def draw(canvas):
         rocket
     ]
 
-    while len(coroutines):
+    while coroutines:
         for coroutine in coroutines.copy():
             try:
                 coroutine.send(None)
